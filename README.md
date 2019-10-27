@@ -1,3 +1,9 @@
+## Description
+
+This is movie search application that allows users to search by movie title
+
+## React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
