@@ -7,7 +7,11 @@ const Search = () => {
   const {clearMovies, searchMovies} = React.useContext(MoviesContext);
   const [formValue, setFormValue] = React.useState(initialFormValue);
 
-  const clear = () => setFormValue(initialFormValue) && clearMovies();
+  const clear = () => {
+    setFormValue(initialFormValue);
+    clearMovies();
+  };
+
   const search = () => searchMovies(formValue);
 
   return (
