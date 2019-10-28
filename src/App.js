@@ -1,16 +1,19 @@
 import React from 'react';
-import MoviesList from './components/MoviesList';
-import Search from './components/Search';
-import Loader from './components/Loader';
 import {MoviesStore} from './context/MoviesStore';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import Home from './pages/Home';
+import Movie from './pages/Movie';
 
 function App() {
   return (
     <MoviesStore>
-      <h1>Movies Search</h1>
-      <Search/>
-      <Loader/>
-      <MoviesList/>
+      <BrowserRouter>
+        <Switch>
+          <Route path={'/'} exact component={Home}/>
+          <Route path={'/movie/:id'} exact component={Movie}/>
+        </Switch>
+      </BrowserRouter>
     </MoviesStore>
   );
 }
